@@ -26,9 +26,15 @@
       border-radius:0.5em; /*font-size를 기준으로 크기를 잡겠다*/
       background:red;
       font-size:1.5rem;  /*html 기준으로 잡겠다 */
-      transform:perspective(500px) rotateY(40deg); /*균일하게 3d느낌을 주고 싶으면 transform한테 perspective주셈*/
+      transition: 1s;
+      /* transform:perspective(500px) rotateY(40deg);  */
+      /*균일하게 3d느낌을 주고 싶으면 transform한테 perspective주셈*/
 
+    }
 
+    .world:hover .card{
+      transform: rotateY(180deg);
+      color:red;
     }
   </style>
 </head>
