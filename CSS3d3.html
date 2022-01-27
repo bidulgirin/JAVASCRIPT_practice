@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .world {
+      display:flex;
+      align-items:center;
+      justify-content: center;
+      width:80vw; /*viewport의 60퍼센트 채우겠다*/
+      height: 80vh;
+      background:#fff000;
+      perspective: 500px;
+      /* perspective: 500px; /*3d 느낌을 주기 위해서 눈에서 떨어진 거리를 입력  */
+
+    }
+
+    .card-side{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      position:absolute;
+      border-radius:0.5em; /*font-size를 기준으로 크기를 잡겠다*/
+
+      width:100px;
+      height:150px;
+        transition: 1s;
+      font-size:1.5rem;  /*html 기준으로 잡겠다 */
+      -moz-backface-visibility:hidden;/*mozila환경에서는  -moz을 적어준다*/
+      -webkit-backface-visibility:hidden;/*safari환경에서는 -webkit을 적어준다*/
+      -o-backface-visibility:hidden;/*ofera환경에서는 -o을 적어준다*/
+      backface-visibility:hidden; /*뒷요소 안보이게 해주는 코드, 표준값은 맨 뒤에 적어준다 */
+      top:50%;
+      left:50%;
+      margin: -75px 0 0 -50px;
+    }
+    .card-side-front{
+      background:white;
+      z-index:2;
+    }
+    .card-side-back{
+      background:red;
+      transform: rotateY(180deg);
+    }
+    .world:hover .card-side-front{
+      transform: rotateY(180deg);
+    }
+    .world:hover .card-side-back{
+    transform: rotateY(360deg);
+    }
+  </style>
+</head>
+<body>
+    <div class="world">
+
+        <div class="card-side card-side-front">F</div>
+        <div class="card-side card-side-back">B</div>
+
+    </div>
+</body>
+</html>
