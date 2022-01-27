@@ -26,7 +26,8 @@
       width:100px;
       height:150px;
       transition: 1s;
-      transform-style:preserve-3d;/*3d공간에 배치되도록하는 코드*/
+      transform-style: preserve-3d;/*3d공간에 배치되도록하는 코드, explore는 지원이 안됨*/
+
       transform-origin:left;/* 회전되는 기준을 정하는 코드*/
       /* transform:perspective(500px) rotateY(40deg);  */
       /*균일하게 3d느낌을 주고 싶으면 transform한테 perspective주셈*/
@@ -42,7 +43,10 @@
       width:100%;
       height:100%;
       font-size:1.5rem;  /*html 기준으로 잡겠다 */
-      backface-visibility:hidden; /*뒷요소 안보이게 해주는 코드 */
+      -moz-backface-visibility:hidden;/*mozila환경에서는  -moz을 적어준다*/
+      -webkit-backface-visibility:hidden;/*safari환경에서는 -webkit을 적어준다*/
+      -o-backface-visibility:hidden;/*ofera환경에서는 -o을 적어준다*/
+      backface-visibility:hidden; /*뒷요소 안보이게 해주는 코드, 표준값은 맨 뒤에 적어준다 */
     }
     .card-side-front{
       background:white;

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    .container{
+      display:flex;
+      width:100vw;
+      height: 80vh;
+      background:gray;
+
+    }
+    .item{
+      flex-grow:1; /*flex-grow는 아이템각각의 '여백의'비율을 정하는 속성이다*/
+      flex-shirink:1; /*grow랑 세트 같은 수를 쓰기 때문에 신경 안써도 됨*/
+      flex-basis:0; /*flex-basis는 '컨텐츠'의 영역을 정하는 속성이다 기본값은 auto*/
+      /*flex의 축약형으로 쓸수있다 flex: 1; flex-basis:0; 으로 들어간것과 같다*/
+      font-size:3em;
+      background:white;
+      border:3px solid black;
+    }
+    /* .item:nth-child(1){flex-grow: 1;}
+    .item:nth-child(2){flex-grow: 5;}
+    .item:nth-child(3){flex-grow: 2;}
+    .item:nth-child(4){flex-grow: 3;}
+    .item:nth-child(5){flex-grow: 1;} */
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="item">A</div>
+    <div class="item">B</div>
+    <div class="item">c</div>
+    <div class="item">ddd</div>
+    <div class="item">ee</div>
+  </div>
+</body>
+</html>
