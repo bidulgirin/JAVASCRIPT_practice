@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Interactive Web</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .characters {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background: #fff000;
+        }
+        .ilbuni {
+            width: 100px;
+            cursor: pointer;
+        }
+        .characters .ilbuni {
+            display: inline-block;
+        }
+        .special {
+            border: 10px dashed red;
+        }
+    </style>
+
+    <script> /*문서를 위에서 아래 순서로 읽기때문에 null로 뜸*/
+       /*window.addEventListener('load', function(){}) 를 해주면 로드된후에 실행이 되게 함 전역변수도 아니게됨!
+          jquery로 따지면 $(function(){///}); 와 같음!!
+       */
+       // window.addEventListener('load', function(){
+       /*load는 사진모두 로드 된다음 실행 DOMContentLoaded는 골격만 로드되면 실행 */
+
+
+      // window.addEventListener('DOMContentLoaded', function(){
+      //     const ilbuni = document.querySelector('.ilbuni.c');
+      //
+      //
+      //     function clickInbuniHandler(){
+      //       ilbuni.classList.toggle('special'); }
+      //     /*클릭하면 css요소가 켜졌다 꺼졌다함*/
+      //     ilbuni.addEventListener('click', clickInbuniHandler);
+
+
+      });
+
+
+    </script>
+</head>
+<body>
+    <div class="characters">
+        <div class="ilbuni a">
+            <img src="images/ilbuni_0.png" alt="일분이">
+        </div>
+        <div class="ilbuni b">
+            <img src="images/ilbuni_1.png" alt="일분이">
+        </div>
+        <div class="ilbuni c">
+            <img src="images/ilbuni_2.png" alt="일분이">
+        </div>
+        <div class="ilbuni d">
+            <img src="images/ilbuni_3.png" alt="일분이">
+        </div>
+    </div>
+
+
+  <script type="text/javascript">
+    // 요즘엔 이렇게 body끝위에다가 scirpt를 쓰기도 한다
+    //전역변수는 최대한 줄여준다 이름없는 함수 (function(){})를 써서 ();로 호출한다ㅏㅏㅏㅏ
+    //이름없는 함수앞에 window.addEventListener('load',가 없다고 생각하면 쉽다
+
+    (function(){
+        const characters = document.querySelector('.characters');
+
+
+        function clickHandler(e){
+          //  console.log(this);  //addEventListener의 this는 클릭된 characters를 뜻한다
+          // console.log(e.currentTarget); //console.log(this);와 같다
+         }
+
+        characters.addEventListener('click', clickHandler);
+
+    })();//호출연산
+
+  </script>
+</body>
+</html>

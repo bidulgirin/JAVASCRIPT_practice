@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/02_02.css">
+
+<body>
+    <div class="stage">
+      <div class="ilbuni a"></div>
+      <div class="ilbuni b"></div>
+      <div class="ilbuni c"></div>
+    </div>
+
+<script>
+    (function(){
+      // 이벤트 위임
+        const ilbuni = document.querySelector('ilbuni');
+        const stage = document.querySelector('.stage'); //stage에다가 clickHandler 이벤트를 위임하는 것임
+
+        function clickHandler(e){
+          console.log(this); // this와 e.currentTarget은 같은 의
+          console.log(e.currentTarget);
+          console.log(e.target); // 클릭한 객체를 선택함
+
+          if( e.target.classList.contains('ilbuni')){ // e.target.classList.contains('className'); -> 클래스가 객체에 있는지 없는지 확인해주는 코드
+            stage.removeChild(e.target);
+          }
+
+        }
+
+        stage.addEventListener('click', clickHandler);
+
+        //const 안쓰고 let을 쓴이유는 i값이 123 이렇게 바뀔거니깐!
+      // for (let i=0; i < ilbuniGroup.length; i++){
+      //   ilbuniGroup[i].addEventListener('click', clickHandler);
+      // }
+      //ilbuniGroup[1].addEventListener('click', clickHandler);
+      //ilbuniGroup[2].addEventListener('click', clickHandler);
+      //ilbuniGroup[3].addEventListener('click', clickHandler);  -> for 문이 많이 돌수록 메모리사용량이 많아져서 안좋다
+    })();
+</script>
+</body>
+</html>

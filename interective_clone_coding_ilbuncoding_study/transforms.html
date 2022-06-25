@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Interactive Web</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <style>
+      .box-container{
+        display:flex;
+      }
+      .box{
+        width:100px;
+        height:100px;
+        border: 2px solid black;
+        background:rgba(255,255,0,0.7);
+        transition:all 0.5s 0.2s ease; /* transition: 0.5초 동안 0.2 후에 ease 하게 부드럽게 움직임*/
+      }
+      .box:hover{
+        /* transform:scale(2) rotate(45deg) ; */
+        /* transform:skewx(20deg); */
+        /* transform: translate(20px,10px); */
+        transform: scale(1.5) ;
+        transform-origin: bottom;
+
+
+      }
+  </style>
+</head>
+<body>
+  <h1>CSS Transform</h1>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto architecto,
+     rem quas voluptas minus distinctio commodi, maiores consequatur repellendus f
+     ugit. Nulla magni asperiores architecto autem ad maiores cum atque quis veritat
+     is. Voluptates ullam, dignissimos recusandae delectus optio dicta expedita nemo
+     ab pariatur nostrum. At veritatis aliquam natus soluta fuga similique, officia, m
+     agni maxime explicabo nemo consequuntur, rem, tempore nostrum. Aut ex corporis cum. Quo
+     d dignissimos beatae harum, voluptatibus minima incidunt recusandae sapiente distinctio la
+     boriosam ipsum rem nisi velit voluptatem, numquam, libero nulla assumenda amet fuga esse ex
+     ercitationem id! Distinctio at rem eligendi. Unde odit laudantium beatae facilis, recusandae,
+      iure delectus.
+  </p>
+  <div class="box-container">
+    <div class="box">A</div>
+    <div class="box">B</div>
+    <div class="box">C</div>
+    <div class="box">D</div>
+    <div class="box">E</div>
+  </div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto architecto, rem quas
+    voluptas minus distinctio commodi, maiores consequatur repellendus fugit. Nulla magni asperio
+    res architecto autem ad maiores cum atque quis veritatis. Voluptates ullam, dignissimos recus
+    andae delectus optio dicta expedita nemo ab pariatur nostrum. At veritatis aliquam natus soluta fu
+    ga similique, officia, magni maxime explicabo nemo consequuntur, rem, tempore nostrum. Aut ex c
+    orporis cum. Quod dignissimos beatae harum, voluptatibus minima incidunt recusandae sapiente di
+    stinctio laboriosam ipsum rem nisi velit voluptatem, numquam, libero nulla assumenda amet fuga esse exerci
+    tationem id! Distinctio at rem eligendi. Unde odit laudantium beatae facilis, recusand
+    ae, iure delectus.
+  </p>
+</body>
+</html>

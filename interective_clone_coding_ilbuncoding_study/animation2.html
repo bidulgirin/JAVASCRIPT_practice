@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>sprite animation</title>
+  <style>
+    body{background: #aaa;}
+    @keyframes walkman-ani {
+    /*from 은 0%와 같은 역할을 한다*/
+      to{
+        background-position: -1483px 0;
+      }
+    }
+
+    @keyframes forward {
+      0
+
+    }
+      .walkman{
+        width:185.375px; /*가로 전체사이즈에서  컷수만큼 나누고 2를 나눈  크기*/
+        height:375px; /*세로 사이즈에서 2를 나눈 크기*/
+        background:url('images/hello.png') no-repeat 0 0 / auto 375px; /*가로크기 세로크기  세로크기를 기준으로 2를 나눈값으로 그림을 나눠준다*/
+        animation: walkman-ani 1s infinite steps(9); /*step을 이용하면 딱딱딱딱 이렇게 나온다 sprite animation 할때 잘사용함!!*/
+      }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div class="walkman">
+    </div>
+  </div>
+
+</body>
+</html>

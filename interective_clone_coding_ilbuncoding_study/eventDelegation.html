@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>event Delegation</title>
+  <style media="screen">
+    body{
+      width:100vw;
+      height:100vh;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .menu{
+      width:80vw;
+      height:40vh;
+      background-color: #dddddd;
+      display:flex;
+      align-items: center;
+      justify-content: center;
+      justify-content:space-around;
+      border-radius: 30px;
+
+    }
+
+    .menu-button{
+        background: #fefcea; /* Old browsers */
+        background: -moz-linear-gradient(top,  #fefcea 0%, #efcf00 54%, #b7b337 100%); /* FF3.6-15 */
+        background: -webkit-linear-gradient(top,  #fefcea 0%,#efcf00 54%,#b7b337 100%); /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom,  #fefcea 0%,#efcf00 54%,#b7b337 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fefcea', endColorstr='#b7b337',GradientType=0 ); /* IE6-9 */
+        cursor:pointer;
+        border:5px solid white;
+        box-sizing: rgba(0,0,0,0.1) 0 1px 0;
+        border-radius: 20px;
+        display: flex;
+        width:180px;
+        height:100px;
+        align-items: center;
+        justify-content: center;
+        font-weight:bold;
+
+
+    }
+    .btn-label{
+        text-shadow:gray 0 1px 0;
+        pointer-events:none; // 포인트이벤트가 일어나지 않게하는 css 속성
+    }
+      .icon{
+        width:60px;
+        pointer-events:none;
+
+      }
+  </style>
+</head>
+<body>
+  <div class="menu">
+    <button class="menu-button">
+      <img src="./images/ilbuni_0.png" alt="" class="icon">
+      <span class="btn-label">일분이1</span>
+    </button>
+    <button class="menu-button">
+      <img src="./images/ilbuni_1.png" alt="" class="icon">
+      <span class="btn-label">일분이2</span>
+    </button>
+    <button class="menu-button">
+      <img src="./images/ilbuni_2.png" alt="" class="icon">
+      <span class="btn-label">일분이3</span>
+    </button>
+  </div>
+</body>
+</html>
