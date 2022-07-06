@@ -28,6 +28,7 @@ class Person{
  */
 
 class PersonPlus extends Person{
+    
     /*
         중복되는 코드 를 Person에서 상속 받는다
         constructor(name, first, second){ 
@@ -54,6 +55,6 @@ class PersonPlus extends Person{
 
 
 
-var kim = new Person('kim' ,10, 20);
+var kim = new PersonPlus('kim' ,10, 20);
 console.log('kim', kim);
 
