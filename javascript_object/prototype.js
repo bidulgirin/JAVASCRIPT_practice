@@ -17,7 +17,7 @@ function Person(name, first, second, third){
 
     // kim.sum = function(){ 
     //     return this.first + this.second + this.third; 
-    // } // -> 이런식으로 하나하나 함수를 불러올수도 없는 것이다.. 1억개가 있으면 1억개 써줘야함...
+    // } // -> 이런식으로 하나하나 함수를 불러와야해서. 1억개가 있으면 1억개 써줘야함...
 
 
 
