@@ -27,12 +27,8 @@ class Person{
     }
 }
 
+
+
+
 var kim = new Person('kim' , 10, 20);
 console.log('kim', kim);
-
-// function Person(name, first, second, third){
-//     this.name = name;
-//     this.first =  first;
-//     this.second = second;
-//     this.third = third;
-// }   
